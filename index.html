@@ -22,8 +22,34 @@
 				<div class="menuBox">
 					<div class="menuList homeMenuList show clearfix">
 						<ul class="clearfix" style="margin: 0 auto;padding-left: 100px;">
+							<li class="HomeProducts" style="position: relative;">
+								<a href="/page/menu/menu_products.html" onclick="menunav2(14)" class="">Products</a>
+								<div class="selectBox selectBoxHomeProducts" style="display: none;">
+									<div class="selectContent clearfix">
+										<ul class="selectContentList fl">
+											<li class="colorOrange">HG150 Series</li>
+											<li><a href="/en/product/82.html"><i class="arrowright"></i>HG150</a></li>
+											<li><a href="/en/product/82.html"><i class="arrowright"></i>HG150U</a></li>
+											<li><a href="/en/product/82.html"><i class="arrowright"></i>HG150-Ub</a></li>
+										</ul>
+										<ul class="selectContentList fl">
+											<li class="colorOrange">HG180 Series</li>
+											<li><a href="/en/product/153.html"><i class="arrowright"></i>HG180</a></li>
+											<li><a href="/en/product/154.html"><i class="arrowright"></i>HG180D</a></li>
+										</ul>
+										<ul class="selectContentList fl">
+											<li class="corlorBlue mt120">HG180v2 Series</li>
+											<li><a href="/en/product/108.html"><i class="arrowright"></i>HG180v2</a></li>
+											<li><a href="/en/product/109.html"><i class="arrowright"></i>HG180Ev2</a></li>
+											<li><a href="/en/product/109.html"><i class="arrowright"></i>HG180Dv2</a></li>
+											<li><a href="/en/product/110.html"><i class="arrowright"></i>HG180U</a></li>
+											<li><a href="/en/product/110.html"><i class="arrowright"></i>HG180UE</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
 							<li class="HomeSupport" style="position: relative;">
-								<a href="/en/support.html" onclick="menunav2(14)" class="">Support</a>
+								<a href="/page/menu/menu_support.html" onclick="menunav2(14)" class="">Support</a>
 								<div class="selectBox supportSelectBox aboutSelect selectBoxHomeSupport" style="display: none;">
 									<div class="selectContent supportSelectBox clearfix">
 										<ul class="selectContentList fl">
@@ -31,11 +57,11 @@
 											<li class=""><a href=""><i class="arrowright"></i>Download</a></li>
 											<li class=""><a href=""><i class="arrowright"></i>Search Online</a></li>
 											<li class=""><a href=""><i class="arrowright"></i>Bug Report</a></li>
-											
 										</ul>
 									</div>
 								</div>
 							</li>
+							<li><a href="/page/menu/menu_contact.html" onclick="menunav2(16)" style="color: rgb(241, 89, 33);" class="">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -45,18 +71,10 @@
 					<img sizes="" src="/skin/201712061915339628.jpg" alt="">
 					<div class="showBox" style="display: none;">
 						<h1 class="smallBannerTitle1">Welcome to Fiberhome DSL CPE Support</h4>
-						<section>
-							<div>
-								<form>
-									<input type="hidden" name="page" value="search">
-									<input type="hidden" name="type" value="organic">
-									<input type="hidden" name="src" id="src" value="support_searchbox_main">
-									<input type="hidden" name="locale" id="as-search-locale" value="en_US">
-									<input type="text" name="q">
-									<button type="submit" src="/skin/search.svg" disabled></button>
-								</form>
-							</div>
-						</section>
+						<div class="search">
+							<input id="keywords" name="keywords" class="searchInput" placeholder="Search" type="text">
+							<input class="searchIcon" value="" type="submit">
+						</div>
 					</div>
 					<div class="smallBannerMask"></div>
 				</div>
