@@ -151,7 +151,7 @@
 	height: 21px;
 	display: block;
 	float: right;
-	background: url(/skin/close.png) no-repeat center;
+	background: url(/skin/cross_16px.png) no-repeat center;
 	cursor: pointer;
 }
 .closeIcon:hover{
@@ -162,15 +162,14 @@
 	width: 20px;
 	height: 19px;
 	cursor: pointer;
-	display: inline-block;
-	background: url(/skin/search.png) no-repeat center center;
+	background: url(/skin/search_16px.png) no-repeat center center;
 }
 .searchBox .user{
 	width: 20px;
 	height: 19px;
 	cursor: pointer;
 	display: inline-block;
-	background: url(/skin/user.png) no-repeat center center;
+	background: url(/skin/account_16px.png) no-repeat center center;
 }
 .chooseLanguageBox{
 	width: 1200px;
