@@ -162,6 +162,7 @@
 	width: 20px;
 	height: 19px;
 	cursor: pointer;
+	display: inline-block;
 	background: url(/skin/search_16px.png) no-repeat center center;
 }
 .searchBox .user{
