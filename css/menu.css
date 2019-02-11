@@ -1,0 +1,475 @@
+﻿.top{
+	width: 100%;
+	background: #0b4da2;
+	height: 60px;
+	position: relative;
+	min-width: 1200px;
+}
+.top a{
+	color: #fff;
+	display: block;
+	padding: 0 22px;
+	
+}
+.topNav{
+	width: 1200px;
+	margin: 0 auto;
+}
+.tabList{
+	width: 1100px;
+/*	margin: 0 auto;*/
+	height: 60px;
+	line-height: 60px;
+	padding-left: 100px;
+}
+.tabList li{
+	float: left;
+	font-size: 16px;
+	color: #fff;
+	/*padding: 0 22px;*/
+	cursor: pointer;
+}
+ .top a:hover{
+	background: #fff;
+	color: #0b4da2;
+}
+
+.tabList .bkfff{
+	background: #fff;
+	color: #0b4da2;
+}
+.searchBox{
+	height: 60px;
+	position: absolute;
+	top: 20px;
+	right: 40px;
+}
+.searchBox .en{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background: url(../image/eng.png) no-repeat center center;
+	cursor: pointer;
+	padding: 0;
+}
+.searchBox a:hover{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background: url(../image/eng.png) no-repeat center center;
+	
+}
+.searchBox .border1{
+	width: 1px;
+	height: 14px;
+	margin: 2px 16px;
+	display: inline-block;
+	border-right: 2px solid #fff;
+}
+.searchPage{
+	width: 100%;
+	display: none;
+}
+.searchPage .searchClose{
+	width: calc(100% - 40px);
+	position: absolute;
+	top: 0;
+	height: 20px;
+	text-align: right;
+	padding: 20px 40px 20px 0;
+	background: #0b4da2;
+}
+.searchContent{
+	width: 100%;
+	height: 1020px;
+	position: absolute;
+	top: 60px;
+	z-index: 20;
+	background: rgba(255,255,255,0.8);
+}
+.searchLogo{
+	width: 100%;
+	height: 100px;
+	background: #fff;
+}
+.search{
+	/*margin: 0 auto;
+	text-align: center;*/
+	
+	
+}
+.searchContent .search{
+	/*margin: 0 auto;
+	text-align: center;*/
+	position: absolute;
+	left: 50%;
+	top: 214px;
+	width: 1034px;
+	margin-left: -517px;
+}
+.searchContent h3{
+	font-size: 48px;
+	color: #0b4da2;
+	/*position: absolute;
+	top: 214px;
+	left: 460px;*/
+	
+}
+.searchContent .searchInput{
+	width: 998px;
+	height: 68px;
+	border: 1px solid #717171;
+	border-radius: 5px;
+	/*position: absolute;
+	top: 294px;
+	left: 460px;*/
+	margin-top:35px;
+	padding-left: 34px;
+	font-size: 28px;
+}
+.searchContent .searchIcon{
+	width: 41px;
+	height: 43px;
+	display: block;
+	background: url(../image/searchicon.png) no-repeat center;
+	position: absolute;
+	top: 104px;
+	left: 50%;
+	margin-left:447px;
+	border: none;
+}
+.searchInput::-webkit-input-placeholder {
+     color: #787878;
+     font-size: 20px;
+}
+.closeIcon{
+	width: 21px;
+	height: 21px;
+	display: block;
+	float: right;
+	background: url(../image/close.png) no-repeat center;
+	cursor: pointer;
+}
+.closeIcon:hover{
+	transform: rotate(180deg);
+	transition: transform 0.5s ease;
+}
+.searchBox .search{
+	width: 20px;
+	height: 19px;
+	cursor: pointer;
+	display: inline-block;
+	background: url(../image/search.png) no-repeat center center;
+}
+.chooseLanguageBox{
+	width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	
+}
+.chooseLanguagePage{
+	display: block;
+}
+.chooseLanguagePageContent{
+	height: 660px;	
+	background: rgba(255,255,255,1);
+}
+.chooseLanguagePageContent .languageTitle{
+	top: 150px;
+	left: 0px;
+	position: absolute;
+    font-size: 48px;
+    color: #0b4da2;
+}
+.languageIcon{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	background-color: #9a9a9a;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 50%;
+	font-size: 12px;
+	position: relative;
+    top: -3px;
+    margin-right: 5px;
+}
+.languageword{
+	font-size: 20px;
+	color: #454545;
+}
+.language_list{
+    position: relative;
+    top: 310px;
+}
+.english{
+	float: left;
+	margin-right: 76px;
+	margin-bottom: 58px;
+	height: 28px;
+	width: 19%;
+}
+.english:hover .languageIcon{
+	background-color: #0b4da2;
+}
+.english:hover .languageword{
+    color: #0b4da2;
+}
+.menu{
+	width: 100%;
+	height: 100px;
+	/*position: relative;*/
+}
+.hidden{
+	display: hidden;
+}
+.menu .logo,.searchLogo{
+	width: 170px;
+	height: 100px;	
+	float: left;
+	margin-left: 40px;
+}
+.searchLogo{
+	width: 170px;
+	height: 100px;	
+	position: absolute;
+	left: 40px;
+}
+.menuBox{
+	/*overflow: hidden;*/
+}
+.menu .menuList{
+	/*width: 1200px;
+	margin: 0 auto;*/
+	/*padding-left: 240px;*/
+	height: 100px;
+	line-height: 100px;
+	display: none;
+	width: 1070px;
+	margin: 0 auto;
+}
+.menu .show{
+	display: block;
+}
+
+.menuList li{
+	float: left;	
+	margin-right: 50px;
+	cursor: pointer;
+	font-size: 18px;
+	color: #000;
+	/*position: relative;*/
+}
+.menuList a{
+	font-size: 18px;
+	color: #000;
+}
+.menuList .colorRed{
+	color: #f15921;
+}
+
+
+/*导航*/
+.navigation{
+	color: #0b4da2;
+	font-size: 14px;
+}
+.navigation a{
+	color: #fff;
+	font-size: 14px;
+}
+.subNavigation{
+	color: #0b4da2;
+}
+.navigation .home{
+	width: 16px;
+	height: 17px;
+	display: inline-block;
+	background: url(../image/home.png) no-repeat center;
+	position: relative;
+	top: 3px;
+}
+.pageTitle{
+	color: #a8a8a8;
+}
+/*banner+子导航*/
+.industryBannerBox{
+	width: 100%;
+	height: 500px;
+	/*background: url(../image/industryBanner.png) no-repeat center;*/
+	position: relative;
+}
+.carrierBannerBox{
+	background: url(../image/carrierBanner.png) no-repeat center;
+}
+.industryBannerContent{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+.industryBannerContent .navigation{
+	padding-top: 40px;
+	color: #fff;
+}
+.industryBannerContent .navigation .home{
+	background: url(../image/home1.png) no-repeat center;
+}
+.industryTitle{
+	width: 730px;
+	line-height: 60px;
+	color: #fff;
+	font-size: 40px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 40px;
+}
+.industryTime{
+	width: 110px;
+	font-size: 16px;
+	color: #e7e7e7;
+	margin: 30px auto;
+	font-style: italic;
+}
+.industryContent{
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	width: 720px;
+	margin: 0 auto;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.industryBannerButton{
+	width: 165px;
+	height: 45px;
+	border: none;
+	border-radius: 40px;
+	line-height: 45px;
+	color: #fff;
+	background-color: #0b4da2;
+	font-size: 16px;
+	display: block;
+	margin: 36px auto;
+	cursor: pointer;
+	text-align: center;
+}
+.industryBannerButton:hover{
+	color: #fff;
+	background-color: #fa6921;
+}
+
+/*tab弹出*/
+.selectBox{
+	width: 100%;
+	position: absolute;
+	top:160px ;
+	background: rgba(243,243,243,0.9);
+	z-index: 10;
+	padding-bottom: 86px;
+	display: none;
+	left: 0;
+}
+.selectContent{
+	width: 1200px;
+	margin: 0 auto;
+}
+.selectContent ul{
+	margin-right: 40px;
+}
+.selectContent .mr0{
+	margin-right: -86px;
+}
+.selectContent ul .colorOrange{
+	color: #f15921;
+	font-size: 22px;
+	margin-bottom: 40px;
+	margin-top: 60px;
+}
+.selectContent ul .corlorBlue{
+	color: #0b4da2;
+	font-size: 20px;
+	margin-bottom: 37px;
+}
+.selectContent ul .mt120{
+	margin-top: 130px;
+}
+.selectContent ul .mt60{
+	margin-top: 60px;
+}
+.selectContent ul .mb50{
+	margin-bottom: 50px;
+}
+.selectContent ul a{
+	display: block;
+	color: #4a6384;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.selectContent ul a:hover .arrowright{
+	width: 20px;
+}
+.selectContent ul a:hover {
+	color: #1c66c6;
+}
+.selectContent .selectContentList li {
+    float: none;
+    line-height: 25px;
+}
+.supportSelectBox .selectContentList a{
+	margin-bottom: 50px;
+}
+.arrowright{
+	width: 0px;
+	height: 12px;
+	display: inline-block;
+	background: url(../image/arrowrd.png) no-repeat center;
+	margin-right: 10px;
+	transition: all 0.2s linear;
+}
+
+.content .aboutSelect{
+	width: 316px;
+	padding-left: 97px;
+	padding-top: 60px;
+	padding-bottom: 10px;
+	left: -158px;
+	overflow: hidden;
+	top: 100px;
+}
+.content .selectBoxHomeSupport{
+	width: 270px;
+}
+/*.aboutSelect .selectContentList li{
+	margin-bottom: 35px;
+}*/
+
+/*title*/
+.opticalNetworkTitle{
+	color: #0b4da2;
+	font-size: 58px;
+	padding-top: 70px;
+	padding-bottom: 60px;
+}
+
+.backToTop{
+	font-size: 18px;
+}
+
+/*视频播放按钮*/
+.playIcon{
+	width:95px;
+	height: 95px;
+	background: url(../image/play.png) no-repeat center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -47px;
+	margin-top: -47px;
+	cursor: pointer;
+	z-index: 5;
+}

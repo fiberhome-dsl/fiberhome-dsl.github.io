@@ -1,0 +1,189 @@
+.supportContent,.serviceProductContent,.serviceNetworkContent{
+	width: 100%;
+	padding-bottom: 100px;
+}
+.supportContentBox,.serviceProductContentBox,.serviceNetworkContentBox{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 90px;
+}
+.videoBox{
+	width: 1200px;
+	height: 667px;
+	margin-bottom: 60px;
+	position: relative;
+	cursor: pointer;
+}
+.supportContentWord{
+	font-size: 22px;
+	color: #4f4f4f;
+	line-height: 36px;
+	margin-bottom: 54px;
+}
+.serviceProductContent{
+	
+	background: #f2f2f2;
+}
+.serviceProductContentBox,.serviceNetworkContentBox{
+	padding-top: 0;
+}
+
+.serviceProductList{
+	width: 1200px;
+}
+.serviceProductList li{
+	width: 378px;
+	height: 498px;
+	border: 1px solid #c9c9c9;
+	float: left;
+	position: relative;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+.serviceProductList .mr0{
+	margin-right: 0;
+}
+.serviceProductListImg{
+	width: 100%;
+}
+.serviceProductListContent{
+	width: 332px;
+	height: 117px;
+	padding-left: 20px;
+	padding-top:27px;
+	padding-right: 26px;
+}
+.serviceProductListContentWordBox{
+	display: none;
+}
+.show{
+	display: block;
+}
+.serviceProductListContent .dot{
+	margin-left: 0;
+	top: -4px;
+}
+.serviceProductListContentTitle{
+	font-size:22px;
+	color: #0b4da2;
+}
+.serviceProductListContentWord{
+	font-size: 16px;
+	color: #818181;
+	margin-top: 16px;
+}
+.larrow,.rarrow{
+	width: 10px;
+	height: 18px;
+	display: inline-block;
+	margin-top: 4px;
+	cursor: pointer;
+}
+.larrow{
+	background: url(../image/larrrow.png) no-repeat center;
+	margin-right: 12px;
+}
+.rarrow{
+	background: url(../image/rarrrow.png) no-repeat center;
+}
+.serviceProductListBtn{
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	color: #fff;
+	text-align: center;
+	background: #2a3d54;
+	font-size: 18px;
+	position: absolute;
+	bottom: 0;
+}
+.serviceProductListBtn:hover{
+	background : #0b4da2;
+	color: #fff;
+	cursor: pointer;
+}
+.contactBox{
+	font-size: 20px;
+	color: #545454;
+}
+.country{
+	color: #f15921;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+.city{
+	color: #333;
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+.contactBox p{
+	margin-bottom: 16px;
+}
+.contactBox .mt34{
+	margin-bottom: 34px;
+}
+.contactBox .mt42{
+	margin-bottom: 42px;
+}
+.contactBox .mt86{
+	margin-bottom: 86px;
+}
+.linkTo{
+	color: #0b4da2;
+}
+.linkTo:hover{
+	text-decoration : underline;
+}
+.linkTo .arrowd{
+	width: 20px;
+	height: 12px;
+	display: inline-block;
+	background: url(../image/arrowrd.png) no-repeat center;
+	position: relative;
+	top: -2px;
+}
+.ftWord{
+	font-size: 16px;
+	color: #7e7e7e;
+	text-align: center;
+	margin-top: 57px;
+}
+.ytWord{
+    font-size: 14px;
+    font-family: arial;
+    float: right;
+    line-height: 24px;
+}
+.ytWord:hover a{
+    color: #0b4da2;
+}
+.ytIcon{
+    width: 54px;
+    height: 22px;
+    background: url(../image/youtube2.png) no-repeat center;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
