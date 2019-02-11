@@ -79,6 +79,15 @@
 	padding: 20px 40px 20px 0;
 	background: #0b4da2;
 }
+.searchPage .userClose{
+	width: calc(100% - 40px);
+	position: absolute;
+	top: 0;
+	height: 20px;
+	text-align: right;
+	padding: 20px 40px 20px 0;
+	background: #0b4da2;
+}
 .searchContent{
 	width: 100%;
 	height: 1020px;
