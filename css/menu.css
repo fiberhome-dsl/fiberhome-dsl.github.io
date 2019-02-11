@@ -144,6 +144,7 @@
 	top: 104px;
 	width: 600px;
 	margin-left: -100px;
+	font-style: italic;
 }
 .userContent .errorMsg{
 	/*margin: 0 auto;
@@ -153,8 +154,8 @@
 	top: 104px;
 	width: 600px;
 	margin-left: -100px;
-	font-style: italic;
-	color: #f00
+	color: #f00;
+	align-content: center;
 }
 .searchContent .searchInput{
 	width: 998px;
@@ -168,7 +169,7 @@
 	padding-left: 34px;
 	font-size: 28px;
 }
-.searchContent .userInput{
+.userContent .userInput{
 	width: 256px;
 	height: 32px;
 	border: 1px solid #717171;
@@ -180,7 +181,7 @@
 	padding-left: 7px;
 	font-size: 20px;
 }
-.searchContent .userSubmit{
+.userContent .userSubmit{
 	width: 256px;
 	height: 32px;
 	border: 1px solid #717171;
