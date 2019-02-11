@@ -54,6 +54,12 @@ $(document).ready(function(){
 	$('.searchClose').click(function(){
 		$('#searchPage').fadeOut(10);	
 	});
+	$('.user').click(function(){
+		$('#userPage').fadeIn(10);	
+	});
+	$('.userClose').click(function(){
+		$('#userPage').fadeOut(10);	
+	});
 	//语言切换
 //	$('.en').click(function(){
 //		$('.chooseLanguagePage').fadeIn("slow");	
