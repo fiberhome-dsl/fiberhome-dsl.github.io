@@ -128,6 +128,34 @@
 	left: 460px;*/
 	
 }
+.userContent{
+	width: 100%;
+	height: 1020px;
+	position: absolute;
+	top: 60px;
+	z-index: 20;
+	background: rgba(255,255,255,0.8);
+}
+.userContent .user{
+	/*margin: 0 auto;
+	text-align: center;*/
+	position: absolute;
+	left: 50%;
+	top: 104px;
+	width: 600px;
+	margin-left: -100px;
+}
+.userContent .errorMsg{
+	/*margin: 0 auto;
+	text-align: center;*/
+	position: absolute;
+	left: 50%;
+	top: 104px;
+	width: 600px;
+	margin-left: -100px;
+	font-style: italic;
+	color: #f00
+}
 .searchContent .searchInput{
 	width: 998px;
 	height: 68px;
@@ -141,28 +169,28 @@
 	font-size: 28px;
 }
 .searchContent .userInput{
-	width: 499px;
-	height: 68px;
+	width: 256px;
+	height: 32px;
 	border: 1px solid #717171;
 	border-radius: 5px;
 	/*position: absolute;
 	top: 294px;
 	left: 460px;*/
 	margin-top:35px;
-	padding-left: 34px;
-	font-size: 28px;
+	padding-left: 7px;
+	font-size: 20px;
 }
 .searchContent .userSubmit{
-	width: 248px;
-	height: 68px;
+	width: 256px;
+	height: 32px;
 	border: 1px solid #717171;
 	border-radius: 5px;
 	/*position: absolute;
 	top: 294px;
 	left: 460px;*/
 	margin-top:35px;
-	padding-left: 34px;
-	font-size: 28px;
+	padding-left: 7px;
+	font-size: 20px;
 }
 .searchContent .searchIcon{
 	width: 41px;
