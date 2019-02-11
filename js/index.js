@@ -51,11 +51,13 @@ $(document).ready(function(){
 	$('.search').click(function(){
 		$('#searchPage').fadeIn(10);	
 	});
+	$('.searchClose').click(function(){
+		$('#searchPage').fadeOut(10);
+	});
 	$('.user').click(function(){
 		$('#userPage').fadeIn(10);	
 	});
-	$('.searchClose').click(function(){
-		$('#searchPage').fadeOut(10);
+	$('.userClose').click(function(){
 		$('#userPage').fadeOut(10);
 	});
 	//语言切换
