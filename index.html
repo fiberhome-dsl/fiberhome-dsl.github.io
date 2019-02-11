@@ -22,7 +22,8 @@
 				<div class="menuBox">
 					<div class="menuList homeMenuList show clearfix">
 						<ul class="clearfix" style="margin: 0 auto;padding-left: 100px;">
-							<li><a href="/index.html" class="">Support</a>
+							<li class="HomeSupport" style="position: relative;">
+								<a href="/en/support.html" onclick="menunav2(14)" class="">Support</a>
 								<div class="selectBox supportSelectBox aboutSelect selectBoxHomeSupport" style="display: none;">
 									<div class="selectContent supportSelectBox clearfix">
 										<ul class="selectContentList fl">
@@ -30,6 +31,7 @@
 											<li class=""><a href=""><i class="arrowright"></i>Download</a></li>
 											<li class=""><a href=""><i class="arrowright"></i>Search Online</a></li>
 											<li class=""><a href=""><i class="arrowright"></i>Bug Report</a></li>
+											
 										</ul>
 									</div>
 								</div>
@@ -41,32 +43,21 @@
 			<div class="bannerBox">
 				<div class="smallBanner smallBanner1">
 					<img sizes="" src="/skin/201712061915339628.jpg" alt="">
-					<div class="as-banner-content">
-		                <div class="pageTitle  ">
-		        			<h1 class="pageTitle-heading">Welcome to Fiberhome DSL CPE Support</h1></div>
-							<section class="as-search" data-analytics-region="suggested search" role="section">
-								<div class="as-search-content">
-									<div class="row">
-										<form action="/index" method="get" id="as-search-form" onsubmit="return false;">
-											<input name="page" value="search" type="hidden">
-											<input name="type" value="organic" type="hidden">
-											<input name="src" id="src" value="support_searchbox_main" type="hidden">
-											<input name="locale" id="as-search-locale" value="en_US" type="hidden">
-											<label for="as-search-input" class="a11y"> Search Support</label> 
-
-											<input class="as-search-form-input" id="as-search-input" placeholder="Search Support" name="q" spellcheck="false" value="" role="combobox" type="text">
-
-											<button class="as-search-form-submit" type="submit" aria-label="Submit" disabled="" style="opacity: 0.4;"></button>
-
-											<button id="as-search-close" class="as-search-form-reset" type="reset">
-												<span class="icon icon-closealt" id="as-search-close-icon" aria-hidden="true"></span>
-												<span class="a11y">Clear Search</span>
-											</button>
-										</form>
-									</div>
-								</div>
-							</section>
-						</div>
+					<div class="showBox" style="display: none;">
+						<h1 class="smallBannerTitle1">Welcome to Fiberhome DSL CPE Support</h4>
+						<section>
+							<div>
+								<form>
+									<input type="hidden" name="page" value="search">
+									<input type="hidden" name="type" value="organic">
+									<input type="hidden" name="src" id="src" value="support_searchbox_main">
+									<input type="hidden" name="locale" id="as-search-locale" value="en_US">
+									<input type="text" name="q">
+									<button type="submit" src="/skin/search.svg" disabled></button>
+								</form>
+							</div>
+						</section>
+					</div>
 					<div class="smallBannerMask"></div>
 				</div>
 			</div>
