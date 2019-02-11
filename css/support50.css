@@ -80,11 +80,11 @@
 	cursor: pointer;
 }
 .larrow{
-	background: url(../image/larrrow.png) no-repeat center;
+	background: url(/skin/larrrow.png) no-repeat center;
 	margin-right: 12px;
 }
 .rarrow{
-	background: url(../image/rarrrow.png) no-repeat center;
+	background: url(/skin/rarrrow.png) no-repeat center;
 }
 .serviceProductListBtn{
 	width: 100%;
@@ -138,7 +138,7 @@
 	width: 20px;
 	height: 12px;
 	display: inline-block;
-	background: url(../image/arrowrd.png) no-repeat center;
+	background: url(/skin/arrowrd.png) no-repeat center;
 	position: relative;
 	top: -2px;
 }
@@ -160,7 +160,7 @@
 .ytIcon{
     width: 54px;
     height: 22px;
-    background: url(../image/youtube2.png) no-repeat center;
+    background: url(/skin/youtube2.png) no-repeat center;
     background-size: 100% 100%;
     display: inline-block;
     position: relative;

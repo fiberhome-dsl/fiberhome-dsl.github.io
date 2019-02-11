@@ -48,7 +48,7 @@
 	display: inline-block;
 	width: 20px;
 	height: 21px;
-	background: url(../image/eng.png) no-repeat center center;
+	background: url(/skin/eng.png) no-repeat center center;
 	cursor: pointer;
 	padding: 0;
 }
@@ -56,7 +56,7 @@
 	display: inline-block;
 	width: 20px;
 	height: 21px;
-	background: url(../image/eng.png) no-repeat center center;
+	background: url(/skin/eng.png) no-repeat center center;
 	
 }
 .searchBox .border1{
@@ -131,7 +131,7 @@
 	width: 41px;
 	height: 43px;
 	display: block;
-	background: url(../image/searchicon.png) no-repeat center;
+	background: url(/skin/searchicon.png) no-repeat center;
 	position: absolute;
 	top: 104px;
 	left: 50%;
@@ -147,7 +147,7 @@
 	height: 21px;
 	display: block;
 	float: right;
-	background: url(../image/close.png) no-repeat center;
+	background: url(/skin/close.png) no-repeat center;
 	cursor: pointer;
 }
 .closeIcon:hover{
@@ -159,7 +159,14 @@
 	height: 19px;
 	cursor: pointer;
 	display: inline-block;
-	background: url(../image/search.png) no-repeat center center;
+	background: url(/skin/search.png) no-repeat center center;
+}
+.searchBox .user{
+	width: 20px;
+	height: 19px;
+	cursor: pointer;
+	display: inline-block;
+	background: url(/skin/user.png) no-repeat center center;
 }
 .chooseLanguageBox{
 	width: 1200px;
@@ -287,7 +294,7 @@
 	width: 16px;
 	height: 17px;
 	display: inline-block;
-	background: url(../image/home.png) no-repeat center;
+	background: url(/skin/home.png) no-repeat center;
 	position: relative;
 	top: 3px;
 }
@@ -298,11 +305,11 @@
 .industryBannerBox{
 	width: 100%;
 	height: 500px;
-	/*background: url(../image/industryBanner.png) no-repeat center;*/
+	/*background: url(/skin/industryBanner.png) no-repeat center;*/
 	position: relative;
 }
 .carrierBannerBox{
-	background: url(../image/carrierBanner.png) no-repeat center;
+	background: url(/skin/carrierBanner.png) no-repeat center;
 }
 .industryBannerContent{
 	width: 1200px;
@@ -315,7 +322,7 @@
 	color: #fff;
 }
 .industryBannerContent .navigation .home{
-	background: url(../image/home1.png) no-repeat center;
+	background: url(/skin/home1.png) no-repeat center;
 }
 .industryTitle{
 	width: 730px;
@@ -427,7 +434,7 @@
 	width: 0px;
 	height: 12px;
 	display: inline-block;
-	background: url(../image/arrowrd.png) no-repeat center;
+	background: url(/skin/arrowrd.png) no-repeat center;
 	margin-right: 10px;
 	transition: all 0.2s linear;
 }
@@ -464,7 +471,7 @@
 .playIcon{
 	width:95px;
 	height: 95px;
-	background: url(../image/play.png) no-repeat center;
+	background: url(/skin/play.png) no-repeat center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
