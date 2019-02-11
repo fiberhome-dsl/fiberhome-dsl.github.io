@@ -64,7 +64,7 @@
 	height: 14px;
 	margin: 2px 16px;
 	display: inline-block;
-	border-right: 2px solid #fff;
+	border-right: 2px solid #000;
 }
 .searchPage{
 	width: 100%;
@@ -97,6 +97,10 @@
 	text-align: center;*/
 	
 	
+}
+.user{
+	/*margin: 0 auto;
+	text-align: center;*/
 }
 .searchContent .search{
 	/*margin: 0 auto;
