@@ -40,50 +40,68 @@
 			</div>
 			<div class="bannerBox">
 				<div class="smallBanner smallBanner1">
-					<img sizes="(min-width:735px ) 735w, 100vw" src="/skin/201712061915339628.jpg" alt="">
-					<h5 class="smallBannerTitle">Carrier Solution</h5>
-					<div class="showBox">
-					<h4 class="smallBannerTitle1">Carrier Solution</h4>
-					<p class="smallBannerContent">Fiber-Optic Communications, Data Communications, Wireless Communicaitons</p>
-					<a href="" class="checkMore" onClick="menunav(2,21)">MORE+</a>
-					</div>
+					<img sizes="" src="/skin/201712061915339628.jpg" alt="">
+					<div class="as-banner-content">
+		                <div class="pageTitle  ">
+		        			<h1 class="pageTitle-heading">Welcome to Fiberhome DSL CPE Support</h1></div>
+							<section class="as-search" data-analytics-region="suggested search" role="section">
+								<div class="as-search-content">
+									<div class="row">
+										<form action="/index" method="get" id="as-search-form" onsubmit="return false;">
+											<input name="page" value="search" type="hidden">
+											<input name="type" value="organic" type="hidden">
+											<input name="src" id="src" value="support_searchbox_main" type="hidden">
+											<input name="locale" id="as-search-locale" value="en_US" type="hidden">
+											<label for="as-search-input" class="a11y"> Search Support</label> 
+
+											<input class="as-search-form-input" id="as-search-input" placeholder="Search Support" name="q" spellcheck="false" value="" role="combobox" type="text">
+
+											<button class="as-search-form-submit" type="submit" aria-label="Submit" disabled="" style="opacity: 0.4;"></button>
+
+											<button id="as-search-close" class="as-search-form-reset" type="reset">
+												<span class="icon icon-closealt" id="as-search-close-icon" aria-hidden="true"></span>
+												<span class="a11y">Clear Search</span>
+											</button>
+										</form>
+									</div>
+								</div>
+							</section>
+						</div>
 					<div class="smallBannerMask"></div>
 				</div>
 			</div>
-			<div class="serviceNetworkContent" id="snBox">
-				<div class="serviceNetworkContentBox">
-					<h3 class="opticalNetworkTitle">Service Network</h3>
-					<div class="contactBox clearfix">
-						<div class="contactLeft fl">
-							<h3 class="country">China offices</h3>
-							<h4 class="city">Beijing</h4>
-							<p class="mt34">Tel. +63600836-8045</p>
-							<p>E-mail:</p>
-							<p class="mt34">gaowei@fiberhome.com</p>	
-							<p>Address:</p>
-							<p>7th Floor, 6th Gate, Dacheng Plaza, </p>
-							<p>No.28, Xuanwu Gate, </p>
-							<p class="mt42">Xicheng District, Beijing</p>
-							<a href="/en/support/137.html" class="linkTo">
-								<i class="arrowd"></i>
-								All China offices
-							</a>
-						</div>
-						<div class="contactRight fr">
-							<h3 class="country">Customer service centers</h3>
-							<p class="mt86">Tel. +63600836-8045</p>
-							
-							<h3 class="country">Worldwide offices</h3>
-							<p>Get in touch with your local office. </p>
-							<p class="mt42">Browse through all regional contacts below. </p>
-							<a href="/en/support/139.html" class="linkTo">
-								<i class="arrowd"></i>
-								All Worldwide offices
-							</a>
-						</div>
-					</div>
+		</div>
+		<div class="footerBottom">
+			<div class="footerBottomContent">
+				<div class="fl">
+					<a href="javascript:;" style="color: #929292;">CONTACT US</a>
+					<span style="color: #929292;">|</span>
 				</div>
+				<p class="fr" style="color: #929292;">COPYRIGHT FIBERHOME @2017 ALL RIGHT RESERVED</p>
 			</div>
 		</div>
+		<script src="/js/jquery.js"></script>
+		<script src="/js/idangerous.swiper.min.js"></script>
+		<script src="/js/index.js"></script>
+		<script>
+			 var mySwiper = new Swiper('.swiper-container',{
+			    pagination: '.pagination',
+			    loop:true,
+			    grabCursor: true,
+			    autoplay : 2000,
+			    speed : 1500,
+			    paginationClickable: true
+			  })
+			  $('.leftArrow').on('click', function(e){
+			    e.preventDefault()
+			    mySwiper.swipePrev()
+			  })
+			  $('.rightArrow').on('click', function(e){
+			    e.preventDefault()
+			    mySwiper.swipeNext()
+			  })
+			  localStorage.setItem("menuName",0);
+			  localStorage.setItem("menuName2",0);
+		</script>
 	</body>
 </html>
