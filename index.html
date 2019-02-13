@@ -2,11 +2,186 @@
 <html>
 <head>
 	<title>Lookup</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		.search{
+
+		}
+		.search .searchTable{
+			text-align:right;
+			margin:20 20 20 20px;
+			font:18px Tahoma;
+		}
+		.content{
+
+		}
+		.content .ContentBorder{
+			text-align:right;
+			margin:50 0 20 0px;
+			font:18px Tahoma;
+		}
+		.content .ContentBorder tr{
+
+		}
+		.content .ContentBorder tr:nth-child(even){
+			background: #FFF;
+		}
+		.content .ContentBorder tr:nth-child(odd){
+			background: #ECF4FC;
+		}
+		.content .ContentBorder td{
+			
+		}
+		.content .ContentBorder td:nth-child(even){
+			text-align:left;
+			table-layout:fixed;
+			word-break:break-all;
+			width: 180px;
+		}
+		.content .ContentBorder td:nth-child(odd){
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+		.errMsg{
+			
+		}
+		.errMsg p{
+			font:18px Tahoma;
+			color: #F00;
+		}
+	</style>
+	<script type="text/javascript">
+		var mac = "";
+		var ssid = "";
+		var key = "";
+		var pass = "";
+
+		function lookup() {
+			var url = "http://cloud.bmob.cn/3b4751eca6a3d0f0/onLookup?";
+			var ch = document.getElementById("challenge").value;
+			var sn = document.getElementById("sn").value;
+
+			if (ch == "" || ch.length != 8 || sn == "" || sn.length != 17)
+			{
+				document.getElementById("errMsg").innerHTML="Input incorrect";
+				return;
+			}
+
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			{
+				xmlhttp=new XMLHttpRequest();
+			}
+			else
+			{
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+				{
+					var res = xmlhttp.responseText;
+
+					document.getElementById("content").style.display="inline";
+					mac = res.split("|")[0];
+					ssid = res.split("|")[1];
+					key = res.split("|")[2];
+					pass = res.split("|")[3];
+					if ( mac != "undefined" && ssid != "undefined" && key != "undefined" && pass != "undefined")
+					{
+						document.getElementById("device").innerHTML="HG180Ev2"
+						document.getElementById("ip").innerHTML="192.168.2.1"
+						document.getElementById("user").innerHTML="admin"
+						document.getElementById("mac").innerHTML=mac;
+						document.getElementById("2g_ssid").innerHTML="true_home2G_" + ssid;
+						document.getElementById("2g_key").innerHTML=key;
+						document.getElementById("5g_ssid").innerHTML="true_home5G_" + ssid;
+						document.getElementById("5g_key").innerHTML=key;
+						document.getElementById("pass").innerHTML=pass;
+					}
+					else
+					{
+						document.getElementById("errMsg").innerHTML="Not Found";
+						document.getElementById("device").innerHTML="&nbsp;";
+						document.getElementById("ip").innerHTML="&nbsp;";
+						document.getElementById("user").innerHTML="&nbsp;";
+						document.getElementById("mac").innerHTML="&nbsp;";
+						document.getElementById("2g_ssid").innerHTML="&nbsp;";
+						document.getElementById("2g_key").innerHTML="&nbsp;";
+						document.getElementById("5g_ssid").innerHTML="&nbsp;";
+						document.getElementById("5g_key").innerHTML="&nbsp;";
+						document.getElementById("pass").innerHTML="&nbsp;";
+					}
+				}
+			}
+
+			xmlhttp.open("GET", url + "challenge=" + ch + "&sn=" + sn, true);
+			xmlhttp.send();
+		}
+
+		function hidden()
+		{
+			document.getElementById("content").style.display="none";
+		}
+	</script>
 </head>
 <body>
-	<form action="https://cloud.bmob.cn/3b4751eca6a3d0f0/onLookup" method="GET">
-		<input type="text" name="sn" id="sn">
-		<input type="submit" name="" value="Lookup">
-	</form>
+	<div class="search">
+		<form>
+			<table class="searchTable">
+				<tbody>
+					<tr>
+						<td>&nbsp;&nbsp;Challenge:</td>
+						<td><input type="text" name="challenge" id="challenge" onclick="hidden()"></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;sn:</td>
+						<td><input type="text" name="sn" id="sn" onclick="hidden()"></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="button" name="" value="Lookup" onclick="lookup()"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<div id="divErrMsg" class="errMsg">
+		<p id="errMsg"></p>
+	</div>
+	<div id="content" class="content" style="display: none">
+		<table border="0" cellpadding="0" cellspacing="0" class="ContentBorder">
+			<tbody>
+				<tr>
+					<td>Device Name:</td><td id="device"></td>
+				</tr>
+				<tr>
+					<td>Default Gateway:</td><td id="ip"></td>
+				</tr>
+				<tr>
+					<td>MAC:</td><td id="mac"></td>
+				</tr>
+				<tr>
+					<td>User Name:</td><td id="user"></td>
+				</tr>
+				<tr>
+					<td>Password:</td><td id="pass"></td>
+				</tr>
+				<tr>
+					<td>2.4G SSID:</td><td id="2g_ssid"></td>
+				</tr>
+				<tr>
+					<td>2.4G Pass:</td><td id="2g_key"></td>
+				</tr>
+				<tr>
+					<td>5G SSID:</td><td id="5g_ssid"></td>
+				</tr>
+				<tr>
+					<td>5G Pass:</td><td id="5g_key"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
