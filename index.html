@@ -119,11 +119,6 @@
 			xmlhttp.open("GET", url + "challenge=" + ch + "&sn=" + sn, true);
 			xmlhttp.send();
 		}
-
-		function hidden()
-		{
-			document.getElementById("content").style.display="none";
-		}
 	</script>
 </head>
 <body>
@@ -133,11 +128,11 @@
 				<tbody>
 					<tr>
 						<td>&nbsp;&nbsp;Challenge:</td>
-						<td><input type="text" name="challenge" id="challenge" onclick="hidden()"></td>
+						<td><input type="text" name="challenge" id="challenge"></td>
 					</tr>
 					<tr>
 						<td>&nbsp;&nbsp;sn:</td>
-						<td><input type="text" name="sn" id="sn" onclick="hidden()"></td>
+						<td><input type="text" name="sn" id="sn"></td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
