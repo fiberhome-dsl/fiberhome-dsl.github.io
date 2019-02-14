@@ -5,18 +5,36 @@
 	<link rel="icon" href="skin/cloud_computing_32px.ico" type="image/x-icon">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<style type="text/css">
-		.main{
-			margin:0 auto;
-			width:600px;
+		.page{
+			z-index:-1;
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:100%;
 		}
 		.logo{
+			
 			left: 5%;
 			top: 5%;
 			position: absolute;
 		}
+		.welcome{
+			left: 38.4%;
+			top: 25%;
+			position: absolute;
+		}
+		.errMsg{
+			color:#E9102A;
+			font-size:14px;
+			font-family:Arial;
+			left: 47%;
+			top: 30%;
+			text-align: center;
+			position: absolute;
+		}
 		.search{
-			left: 35%;
-			top: 20%;
+			left: 42%;
+			top: 35%;
 			position: absolute;
 		}
 		.search .searchTable{
@@ -25,21 +43,14 @@
 			font:18px Tahoma;
 		}
 		.content{
-			left: 35%;
-			top: 40%;
+			left: 38%;
+			top: 50%;
 			position: absolute;
-			align-content: center;
 		}
 		.content .ContentBorder{
 			text-align:right;
 			margin:50 0 20 0px;
 			font:18px Tahoma;
-		}
-		.content .ContentBorder tr{
-
-		}
-		.content .ContentBorder td{
-			
 		}
 		.content .ContentBorder td:nth-child(even){
 			text-align:left;
@@ -56,12 +67,10 @@
 			font-weight:normal;
 			font-size:12px;
 			color:#FFF;
-			position: absolute;
+			left: 39%;
 			bottom: 12px;
-			left: 35%;
+			position: absolute;
 		}
-		.errMsg{color:#E9102A;font-size:12px;font-family:Arial;vertical-align:middler}
-		.page{z-index:-1;position:absolute;left:0px;top:0px;width:100%;}
 	</style>
 	<script type="text/javascript">
 		var mac = "";
@@ -216,74 +225,86 @@
 				obj.style.height = BgHeight;
 			}
 		}
+
+		function pressEnter(e)
+		{
+			var evt = window.event || e; 
+			if (evt.keyCode == 13){
+				lookup();
+			}
+		}
 	</script>
 </head>
 <body style="overflow:hidden;top:0px" onResize="ChangeBgsize();">
 	<script>PrintBackground();</script>
-	<div width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+	<div width="100%" height="100%" cellpadding="0" cellspacing="0">
 		<div class="logo">
 			<img src="skin/logo.png">
 		</div>
-		<div class="search">
-			<h3>Welcome to Fiberhome AP Support</h3>
-			<div id="divErrMsg" class="errMsg">
-				<p id="errMsg"></p>
+		<div>
+			<div class="welcome">
+				<h3>Welcome to Fiberhome AP Support</h3>
 			</div>
-			<form>
-				<table class="searchTable" align="center">
+			<div id="divErrMsg" class="errMsg">
+				<p id="errMsg" align="center"></p>
+			</div>
+			<div class="search">
+				<form>
+					<table class="searchTable" align="center">
+						<tbody>
+							<tr>
+								<td>&nbsp;&nbsp;Device SN:</td>
+								<td><input type="text" name="sn" id="sn" onkeyup="hiddenContent()" onkeydown="pressEnter(event);"></td>
+							</tr>
+							<tr>
+								<td>&nbsp;&nbsp;Auth Code:</td>
+								<td><input type="password" name="challenge" id="challenge" onkeyup="hiddenContent()" onkeydown="pressEnter(event);"></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td><input type="button" name="" value="Lookup" onclick="lookup()"></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+			<div id="content" class="content" style="display: none">
+				<table border="0" cellpadding="0" cellspacing="0" class="ContentBorder">
 					<tbody>
 						<tr>
-							<td>&nbsp;&nbsp;Device SN:</td>
-							<td><input type="text" name="sn" id="sn" onkeyup="hiddenContent()"></td>
+							<td>Device Name:</td><td id="device"></td>
 						</tr>
 						<tr>
-							<td>&nbsp;&nbsp;Auth Code:</td>
-							<td><input type="password" name="challenge" id="challenge" onkeyup="hiddenContent()"></td>
+							<td>Default Gateway:</td><td id="ip"></td>
 						</tr>
 						<tr>
-							<td>&nbsp;</td>
-							<td><input type="button" name="" value="Lookup" onclick="lookup()"></td>
+							<td>MAC:</td><td id="mac"></td>
+						</tr>
+						<tr>
+							<td>User Name:</td><td id="user"></td>
+						</tr>
+						<tr>
+							<td>Password:</td><td id="pass"></td>
+						</tr>
+						<tr>
+							<td>2.4G SSID:</td><td id="2g_ssid"></td>
+						</tr>
+						<tr>
+							<td>2.4G Pass:</td><td id="2g_key"></td>
+						</tr>
+						<tr>
+							<td>5G SSID:</td><td id="5g_ssid"></td>
+						</tr>
+						<tr>
+							<td>5G Pass:</td><td id="5g_key"></td>
 						</tr>
 					</tbody>
 				</table>
-			</form>
+			</div>
 		</div>
-		<div id="content" class="content" style="display: none">
-			<table border="0" cellpadding="0" cellspacing="0" class="ContentBorder">
-				<tbody>
-					<tr>
-						<td>Device Name:</td><td id="device"></td>
-					</tr>
-					<tr>
-						<td>Default Gateway:</td><td id="ip"></td>
-					</tr>
-					<tr>
-						<td>MAC:</td><td id="mac"></td>
-					</tr>
-					<tr>
-						<td>User Name:</td><td id="user"></td>
-					</tr>
-					<tr>
-						<td>Password:</td><td id="pass"></td>
-					</tr>
-					<tr>
-						<td>2.4G SSID:</td><td id="2g_ssid"></td>
-					</tr>
-					<tr>
-						<td>2.4G Pass:</td><td id="2g_key"></td>
-					</tr>
-					<tr>
-						<td>5G SSID:</td><td id="5g_ssid"></td>
-					</tr>
-					<tr>
-						<td>5G Pass:</td><td id="5g_key"></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div valign="middle" align="center" id="Copyright" class="Copyright">
-			<p style="color: #FFF;text-align: center">COPYRIGHT FIBERHOME © 2019 ALL RIGHT RESERVED</p>
-		</div>
+	</div>
+	<div valign="middle" align="center" id="Copyright" class="Copyright">
+		<p style="color: #FFF;text-align: center">COPYRIGHT FIBERHOME © 2019 ALL RIGHT RESERVED</p>
 	</div>
 </body>
 </html>
