@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lookup</title>
+	<title>Product Data Lookup-Fiberhome DSL CPE Support</title>
+	<link rel="icon" href="/skin/cloud_computing_32px.ico" type="image/x-icon">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<style type="text/css">
+		.main{
+			margin:0 auto;
+			width:600px;
+		}
+		.logo{
+			left: 5%;
+			top: 5%;
+			position: absolute;
+		}
 		.search{
-
+			left: 35%;
+			top: 20%;
+			position: absolute;
 		}
 		.search .searchTable{
 			text-align:right;
@@ -13,7 +25,10 @@
 			font:18px Tahoma;
 		}
 		.content{
-
+			left: 35%;
+			top: 40%;
+			position: absolute;
+			align-content: center;
 		}
 		.content .ContentBorder{
 			text-align:right;
@@ -22,12 +37,6 @@
 		}
 		.content .ContentBorder tr{
 
-		}
-		.content .ContentBorder tr:nth-child(even){
-			background: #FFF;
-		}
-		.content .ContentBorder tr:nth-child(odd){
-			background: #ECF4FC;
 		}
 		.content .ContentBorder td{
 			
@@ -42,19 +51,42 @@
 			padding-right: 20px;
 			padding-left: 20px;
 		}
-		.errMsg{
-			
+		.Copyright{
+			font-family:Arial;
+			font-weight:normal;
+			font-size:12px;
+			color:#FFF;
+			position: absolute;
+			bottom: 12px;
+			left: 40%;
 		}
-		.errMsg p{
-			font:18px Tahoma;
-			color: #F00;
-		}
+		.errMsg{color:#E9102A;font-size:12px;font-family:Arial;vertical-align:middler}
+		.page{z-index:-1;position:absolute;left:0px;top:0px;width:100%;}
 	</style>
 	<script type="text/javascript">
 		var mac = "";
 		var ssid = "";
 		var key = "";
 		var pass = "";
+
+		function PrintBackground()
+		{
+			var BgWidth = 0;
+			var BgHeight = 0;
+			if(window.innerWidth)
+			{
+				BgHeight = window.innerHeight;
+				BgWidth = window.innerWidth;	
+			}
+			else
+			{
+				BgHeight = document.body.clientHeight;
+				BgWidth = document.body.clientWidth;
+			}
+			document.write('<div class="page">');
+			document.write('<img border="0" id="loginbg" width="'+BgWidth+'" height="'+BgHeight+'" src="../skin/loginback.png">');
+			document.write('</div>');
+		}
 
 		function lookup() {
 			var url = "https://cloud.bmob.cn/3b4751eca6a3d0f0/onLookup?";
@@ -135,64 +167,123 @@
 			document.getElementById("errMsg").innerHTML="";
 			document.getElementById("content").style.display="none";
 		}
+
+		function ChangeBgsize()
+		{
+			var obj;
+			var offset = 0;
+			var BgWidth = 0;
+			var BgHeight = 0;
+			var TableWidth = 0;
+			var LastSpace = 0;
+			var MidSpace = 0;
+			if(window.innerWidth)
+			{
+				BgHeight = window.innerHeight;
+				BgWidth = window.innerWidth;
+			}
+			else
+			{
+				BgHeight = document.body.clientHeight;
+				BgWidth = document.body.clientWidth;
+			}
+			TableWidth = BgWidth - 40 ;
+			LastSpace = BgWidth -763;
+			LastSpace = LastSpace / 3;
+			MidSpace = LastSpace;
+			if(BgWidth < 763)
+			{
+				TableWidth = 763;
+				offset = 56;
+				MidSpace = 0;
+				LastSpace = 0;
+				BgWidth = TableWidth + 40;
+			}
+			else
+				TableWidth = "100%";
+			
+			if(LastSpace < 1)
+				LastSpace = 0;
+			else if(LastSpace > 210)
+			{
+				MidSpace = 210;
+				LastSpace = ( LastSpace * 3 - 210 ) / 2;
+			}
+			obj = document.getElementById("loginbg");
+			if(obj)
+			{
+				obj.style.width = BgWidth;
+				obj.style.height = BgHeight;
+			}
+		}
 	</script>
 </head>
-<body>
-	<div class="search">
-		<form>
-			<table class="searchTable">
+<body style="overflow:hidden;top:0px" onResize="ChangeBgsize();">
+	<script>PrintBackground();</script>
+	<div width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+		<div class="logo">
+			<img src="../skin/logo.png">
+		</div>
+		<div class="search">
+			<h3>Welcome to Fiberhome DSL CPE Support</h3>
+			<div id="divErrMsg" class="errMsg">
+				<p id="errMsg"></p>
+			</div>
+			<form>
+				<table class="searchTable" align="center">
+					<tbody>
+						<tr>
+							<td>&nbsp;&nbsp;Device SN:</td>
+							<td><input type="text" name="sn" id="sn" onkeyup="hiddenContent()"></td>
+						</tr>
+						<tr>
+							<td>&nbsp;&nbsp;Auth Code:</td>
+							<td><input type="password" name="challenge" id="challenge" onkeyup="hiddenContent()"></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="button" name="" value="Lookup" onclick="lookup()"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div id="content" class="content" style="display: none">
+			<table border="0" cellpadding="0" cellspacing="0" class="ContentBorder">
 				<tbody>
 					<tr>
-						<td>&nbsp;&nbsp;Auth Code:</td>
-						<td><input type="text" name="challenge" id="challenge" onkeyup="hiddenContent()"></td>
+						<td>Device Name:</td><td id="device"></td>
 					</tr>
 					<tr>
-						<td>&nbsp;&nbsp;Device SN:</td>
-						<td><input type="text" name="sn" id="sn" onkeyup="hiddenContent()"></td>
+						<td>Default Gateway:</td><td id="ip"></td>
 					</tr>
 					<tr>
-						<td>&nbsp;</td>
-						<td><input type="button" name="" value="Lookup" onclick="lookup()"></td>
+						<td>MAC:</td><td id="mac"></td>
+					</tr>
+					<tr>
+						<td>User Name:</td><td id="user"></td>
+					</tr>
+					<tr>
+						<td>Password:</td><td id="pass"></td>
+					</tr>
+					<tr>
+						<td>2.4G SSID:</td><td id="2g_ssid"></td>
+					</tr>
+					<tr>
+						<td>2.4G Pass:</td><td id="2g_key"></td>
+					</tr>
+					<tr>
+						<td>5G SSID:</td><td id="5g_ssid"></td>
+					</tr>
+					<tr>
+						<td>5G Pass:</td><td id="5g_key"></td>
 					</tr>
 				</tbody>
 			</table>
-		</form>
-	</div>
-	<div id="divErrMsg" class="errMsg">
-		<p id="errMsg"></p>
-	</div>
-	<div id="content" class="content" style="display: none">
-		<table border="0" cellpadding="0" cellspacing="0" class="ContentBorder">
-			<tbody>
-				<tr>
-					<td>Device Name:</td><td id="device"></td>
-				</tr>
-				<tr>
-					<td>Default Gateway:</td><td id="ip"></td>
-				</tr>
-				<tr>
-					<td>MAC:</td><td id="mac"></td>
-				</tr>
-				<tr>
-					<td>User Name:</td><td id="user"></td>
-				</tr>
-				<tr>
-					<td>Password:</td><td id="pass"></td>
-				</tr>
-				<tr>
-					<td>2.4G SSID:</td><td id="2g_ssid"></td>
-				</tr>
-				<tr>
-					<td>2.4G Pass:</td><td id="2g_key"></td>
-				</tr>
-				<tr>
-					<td>5G SSID:</td><td id="5g_ssid"></td>
-				</tr>
-				<tr>
-					<td>5G Pass:</td><td id="5g_key"></td>
-				</tr>
-			</tbody>
-		</table>
+		</div>
+		<div valign="middle" align="center" id="Copyright" class="Copyright">
+			<p style="color: #FFF;text-align: center">COPYRIGHT FIBERHOME © 2019 ALL RIGHT RESERVED</p>
+		</div>
 	</div>
 </body>
 </html>
