@@ -61,6 +61,9 @@
 			var ch = document.getElementById("challenge").value;
 			var sn = document.getElementById("sn").value;
 
+			document.getElementById("errMsg").innerHTML="";
+			document.getElementById("content").style.display="none";
+
 			if (ch == "" || ch.length != 8 || sn == "" || sn.length != 17)
 			{
 				document.getElementById("errMsg").innerHTML="Input incorrect";
@@ -83,41 +86,54 @@
 				{
 					var res = xmlhttp.responseText;
 
-					document.getElementById("content").style.display="inline";
-					mac = res.split("|")[0];
-					ssid = res.split("|")[1];
-					key = res.split("|")[2];
-					pass = res.split("|")[3];
-					if ( mac != "undefined" && ssid != "undefined" && key != "undefined" && pass != "undefined")
+					if (res != "fail")
 					{
-						document.getElementById("device").innerHTML="HG180Ev2"
-						document.getElementById("ip").innerHTML="192.168.2.1"
-						document.getElementById("user").innerHTML="admin"
-						document.getElementById("mac").innerHTML=mac;
-						document.getElementById("2g_ssid").innerHTML="true_home2G_" + ssid;
-						document.getElementById("2g_key").innerHTML=key;
-						document.getElementById("5g_ssid").innerHTML="true_home5G_" + ssid;
-						document.getElementById("5g_key").innerHTML=key;
-						document.getElementById("pass").innerHTML=pass;
+						document.getElementById("content").style.display="inline";
+						mac = res.split("|")[0];
+						ssid = res.split("|")[1];
+						key = res.split("|")[2];
+						pass = res.split("|")[3];
+						if ( mac != "undefined" && ssid != "undefined" && key != "undefined" && pass != "undefined")
+						{
+							document.getElementById("device").innerHTML="HG180Ev2"
+							document.getElementById("ip").innerHTML="192.168.2.1"
+							document.getElementById("user").innerHTML="admin"
+							document.getElementById("mac").innerHTML=mac;
+							document.getElementById("2g_ssid").innerHTML="true_home2G_" + ssid;
+							document.getElementById("2g_key").innerHTML=key;
+							document.getElementById("5g_ssid").innerHTML="true_home5G_" + ssid;
+							document.getElementById("5g_key").innerHTML=key;
+							document.getElementById("pass").innerHTML=pass;
+						}
+						else
+						{
+							document.getElementById("errMsg").innerHTML="Not Found";
+							document.getElementById("device").innerHTML="&nbsp;";
+							document.getElementById("ip").innerHTML="&nbsp;";
+							document.getElementById("user").innerHTML="&nbsp;";
+							document.getElementById("mac").innerHTML="&nbsp;";
+							document.getElementById("2g_ssid").innerHTML="&nbsp;";
+							document.getElementById("2g_key").innerHTML="&nbsp;";
+							document.getElementById("5g_ssid").innerHTML="&nbsp;";
+							document.getElementById("5g_key").innerHTML="&nbsp;";
+							document.getElementById("pass").innerHTML="&nbsp;";
+						}
 					}
 					else
 					{
-						document.getElementById("errMsg").innerHTML="Not Found";
-						document.getElementById("device").innerHTML="&nbsp;";
-						document.getElementById("ip").innerHTML="&nbsp;";
-						document.getElementById("user").innerHTML="&nbsp;";
-						document.getElementById("mac").innerHTML="&nbsp;";
-						document.getElementById("2g_ssid").innerHTML="&nbsp;";
-						document.getElementById("2g_key").innerHTML="&nbsp;";
-						document.getElementById("5g_ssid").innerHTML="&nbsp;";
-						document.getElementById("5g_key").innerHTML="&nbsp;";
-						document.getElementById("pass").innerHTML="&nbsp;";
+						document.getElementById("errMsg").innerHTML="Auth Code Wrong";
 					}
 				}
 			}
 
 			xmlhttp.open("GET", url + "challenge=" + ch + "&sn=" + sn.toUpperCase(), true);
 			xmlhttp.send();
+		}
+
+		function hiddenContent()
+		{
+			document.getElementById("errMsg").innerHTML="";
+			document.getElementById("content").style.display="none";
 		}
 	</script>
 </head>
@@ -127,12 +143,12 @@
 			<table class="searchTable">
 				<tbody>
 					<tr>
-						<td>&nbsp;&nbsp;Challenge:</td>
-						<td><input type="text" name="challenge" id="challenge"></td>
+						<td>&nbsp;&nbsp;Auth Code:</td>
+						<td><input type="text" name="challenge" id="challenge" onkeyup="hiddenContent()"></td>
 					</tr>
 					<tr>
-						<td>&nbsp;&nbsp;sn:</td>
-						<td><input type="text" name="sn" id="sn"></td>
+						<td>&nbsp;&nbsp;Device SN:</td>
+						<td><input type="text" name="sn" id="sn" onkeyup="hiddenContent()"></td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
